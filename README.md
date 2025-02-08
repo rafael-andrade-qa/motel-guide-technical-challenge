@@ -91,5 +91,6 @@ Before you begin, make sure you have `node` and `npm` installed on your system.
 | Run All Tests (Firefox, Headed Mode)   | `npm run cy:run:firefox:headed`   |
 | Run Tests in Parallel (Chrome)         | `npm run cy:run:chrome:parallel`  |
 | Run Tests in Parallel (Firefox)        | `npm run cy:run:firefox:parallel` |
+| Start the mock server                  | `npm run mock-server`             |
 | Lint Code                              | `npm run lint`                    |
 | Format Code                            | `npm run format`                  |

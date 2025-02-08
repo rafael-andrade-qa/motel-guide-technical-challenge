@@ -20,6 +20,15 @@ jobs:
       - name: Checkout Repository Code
         uses: actions/checkout@v4
 
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Start Mock Server
+        run: npm run mock-server &
+
+      - name: Wait for Mock Server to Start
+        run: npx wait-on http://localhost:3001
+
       - name: Execute Cypress Tests
         uses: cypress-io/github-action@v6
         env:
