@@ -112,7 +112,7 @@ Continuous Integration and Continuous Deployment (CI/CD) workflows have been set
 
 The UI tests were conducted on a custom-built frontend designed specifically for this challenge. You can check out the implementation here:
 🔗 Frontend Project Repository: [Motel Guide Frontend](https://github.com/rafael-andrade-qa/motel-guide-frontend)
-🌍 Live Demo: [Motel Guide Page](
+🌍 Live Demo: [Motel Guide Page](https://rafael-andrade-qa.github.io/motel-guide-frontend/)
 
 The **E2E Test Workflow** runs end-to-end tests for UI and API, ensuring the system functions as expected in an integrated environment.  
 🔗 [View Workflow Run](https://github.com/rafael-andrade-qa/motel-guide-technical-challenge/actions/runs/13216944628)
