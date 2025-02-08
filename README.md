@@ -102,24 +102,25 @@ Before you begin, make sure you have `node` and `npm` installed on your system.
 
 The detailed documentation for the performance tests using k6 is available in: [Performance Tests with k6 documentation](k6/README.md).
 
-## 📊 Test Results
+## CI/CD Implementation
 
-The test results are available in the `results` folder, structured as follows:
+Continuous Integration and Continuous Deployment (CI/CD) workflows have been set up to automate test execution. These workflows run automatically to ensure code quality and performance validation.
 
-```bash
-📦results
-┣ 📂api-tests
-┃ ┣ 📜api-test-results.html
-┃ ┗ 📜api-test-results.json
-┣ 📂load-tests
-┃ ┣ 📜load-test-results.json
-┃ ┗ 📜load-test-results.png
-┗ 📂ui-tests
-┃ ┣ 📜ui-test-results.html
-┃ ┗ 📜ui-test-results.json
-```
+### UI & API Tests  
+The **E2E Test Workflow** runs end-to-end tests for UI and API, ensuring the system functions as expected in an integrated environment.  
+🔗 [View Workflow Run](https://github.com/rafael-andrade-qa/motel-guide-technical-challenge/actions/runs/13216944628)
 
-### 🔍 File Descriptions:
+### Performance Tests  
+The **Load Test Workflow** executes performance tests to evaluate the system's scalability and response times under load conditions.  
+🔗 [View Workflow Run](https://github.com/rafael-andrade-qa/motel-guide-technical-challenge/actions/runs/13217913834)
+
+These workflows are triggered automatically on new commits and pull requests, ensuring continuous validation and reliability of the application.
+
+## Test Results
+
+The test results are available in the `results` folder.
+
+### File Descriptions:
 
 - **API Tests** (`api-tests/`): API test results in HTML and JSON formats.
 - **Load Tests** (`load-tests/`): Load test results in JSON and PNG format.
