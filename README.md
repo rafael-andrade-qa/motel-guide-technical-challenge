@@ -100,4 +100,4 @@ Before you begin, make sure you have `node` and `npm` installed on your system.
 
 ## Performance Testing Documentation
 
-The detailed documentation for the performance tests using k6 is available in: `k6/README.md`.
+The detailed documentation for the performance tests using k6 is available in: [Performance Tests with k6 documentation](k6/README.md).
