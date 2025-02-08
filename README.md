@@ -13,6 +13,8 @@ This repository contains a manual testing project and an automation project made
   - [Setting Up Project Credentials](#setting-up-project-credentials)
   - [Command Table](#command-table)
   - [Perfomance Testing Documentation](#performance-testing-documentation)
+  - [CI/CD Implementation](#cicd-implementation)
+  - [Test Results](#test-results)
 
 ## Test Questions
 
@@ -106,11 +108,13 @@ The detailed documentation for the performance tests using k6 is available in: [
 
 Continuous Integration and Continuous Deployment (CI/CD) workflows have been set up to automate test execution. These workflows run automatically to ensure code quality and performance validation.
 
-### UI & API Tests  
+### UI & API Tests
+
 The **E2E Test Workflow** runs end-to-end tests for UI and API, ensuring the system functions as expected in an integrated environment.  
 🔗 [View Workflow Run](https://github.com/rafael-andrade-qa/motel-guide-technical-challenge/actions/runs/13216944628)
 
-### Performance Tests  
+### Performance Tests
+
 The **Load Test Workflow** executes performance tests to evaluate the system's scalability and response times under load conditions.  
 🔗 [View Workflow Run](https://github.com/rafael-andrade-qa/motel-guide-technical-challenge/actions/runs/13217913834)
 
