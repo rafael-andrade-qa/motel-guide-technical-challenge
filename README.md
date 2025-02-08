@@ -11,7 +11,8 @@ This repository contains a manual testing project and an automation project made
   - [Pre-requisites](#pre-requisites)
   - [Installing](#installing)
   - [Setting Up Project Credentials](#setting-up-project-credentials)
-  - [Command table](#command-table)
+  - [Command Table](#command-table)
+  - [Perfomance Testing Documentation](#performance-testing-documentation)
 
 ## Test Questions
 
@@ -92,5 +93,10 @@ Before you begin, make sure you have `node` and `npm` installed on your system.
 | Run Tests in Parallel (Chrome)         | `npm run cy:run:chrome:parallel`  |
 | Run Tests in Parallel (Firefox)        | `npm run cy:run:firefox:parallel` |
 | Start the mock server                  | `npm run mock-server`             |
+| Start the mock server                  | `npm run mock-server`             |
 | Lint Code                              | `npm run lint`                    |
 | Format Code                            | `npm run format`                  |
+
+## Performance Testing Documentation
+
+The detailed documentation for the performance tests using k6 is available in: `k6/README.md`.

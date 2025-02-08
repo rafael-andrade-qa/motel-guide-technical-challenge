@@ -1,0 +1,47 @@
+name: Load Test Workflow
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-load-tests:
+    name: Run Load Tests with k6
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Start Mock Server
+        run: npm run mock-server &
+
+      - name: Wait for Mock Server to Start
+        run: npx wait-on http://localhost:3001
+
+      - name: Install k6
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y k6
+
+      - name: Execute Load Tests with k6
+        run: k6 run k6/load-test.js --out json=load-test-results.json
+
+      - name: Upload Load Test Results
+        uses: actions/upload-artifact@v4
+        with:
+          name: Load Test Results
+          path: load-test-results.json
+          retention-days: 1
+
+      - name: Archive Failed k6 Results
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Failed Load Test Artifacts
+          path: k6
+          retention-days: 1
