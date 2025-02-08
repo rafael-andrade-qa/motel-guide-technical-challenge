@@ -101,3 +101,28 @@ Before you begin, make sure you have `node` and `npm` installed on your system.
 ## Performance Testing Documentation
 
 The detailed documentation for the performance tests using k6 is available in: [Performance Tests with k6 documentation](k6/README.md).
+
+## 📊 Test Results
+
+The test results are available in the `results` folder, structured as follows:
+
+```bash
+📦results
+┣ 📂api-tests
+┃ ┣ 📜api-test-results.html
+┃ ┗ 📜api-test-results.json
+┣ 📂load-tests
+┃ ┣ 📜load-test-results.json
+┃ ┗ 📜load-test-results.png
+┗ 📂ui-tests
+┃ ┣ 📜ui-test-results.html
+┃ ┗ 📜ui-test-results.json
+```
+
+### 🔍 File Descriptions:
+
+- **API Tests** (`api-tests/`): API test results in HTML and JSON formats.
+- **Load Tests** (`load-tests/`): Load test results in JSON and PNG format.
+- **UI Tests** (`ui-tests/`): UI test results in HTML and JSON formats.
+
+The `.html` files can be opened in a browser for a detailed test report visualization.
