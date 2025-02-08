@@ -83,19 +83,20 @@ Before you begin, make sure you have `node` and `npm` installed on your system.
 
 ### Command table
 
-| Description                            | Command                           |
-| -------------------------------------- | --------------------------------- |
-| Open Cypress Test Runner UI            | `npm run cy:open`                 |
-| Run All Tests (Chrome, Headless Mode)  | `npm run cy:run:chrome`           |
-| Run All Tests (Firefox, Headless Mode) | `npm run cy:run:firefox`          |
-| Run All Tests (Chrome, Headed Mode)    | `npm run cy:run:chrome:headed`    |
-| Run All Tests (Firefox, Headed Mode)   | `npm run cy:run:firefox:headed`   |
-| Run Tests in Parallel (Chrome)         | `npm run cy:run:chrome:parallel`  |
-| Run Tests in Parallel (Firefox)        | `npm run cy:run:firefox:parallel` |
-| Start the mock server                  | `npm run mock-server`             |
-| Start the mock server                  | `npm run mock-server`             |
-| Lint Code                              | `npm run lint`                    |
-| Format Code                            | `npm run format`                  |
+| Description                                | Command                           |
+| ------------------------------------------ | --------------------------------- |
+| Open Cypress Test Runner UI                | `npm run cy:open`                 |
+| Run All Tests (Chrome, Headless Mode)      | `npm run cy:run:chrome`           |
+| Run All Tests (Firefox, Headless Mode)     | `npm run cy:run:firefox`          |
+| Run All Tests (Chrome, Headed Mode)        | `npm run cy:run:chrome:headed`    |
+| Run All Tests (Firefox, Headed Mode)       | `npm run cy:run:firefox:headed`   |
+| Run Tests in Parallel (Chrome)             | `npm run cy:run:chrome:parallel`  |
+| Run Tests in Parallel (Firefox)            | `npm run cy:run:firefox:parallel` |
+| Start Mock Server                          | `npm run mock-server`             |
+| Run Load Tests                             | `npm run load-test`               |
+| Run Load Tests and save the results (JSON) | `npm run load-test:results`       |
+| Lint Code                                  | `npm run lint`                    |
+| Format Code                                | `npm run format`                  |
 
 ## Performance Testing Documentation
 

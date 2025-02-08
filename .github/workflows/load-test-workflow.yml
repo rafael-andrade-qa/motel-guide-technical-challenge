@@ -9,7 +9,7 @@ jobs:
   run-load-tests:
     name: Run Load Tests with k6
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout Repository Code
         uses: actions/checkout@v4

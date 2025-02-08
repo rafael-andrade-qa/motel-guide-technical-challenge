@@ -11,6 +11,8 @@
     "cy:run:chrome:parallel": "cypress-parallel -s cy:run:chrome:headed -t 2 -d cypress/e2e/*.feature",
     "cy:run:firefox:parallel:": "cypress-parallel -s cy:run:firefox:headed -t 2 -d cypress/e2e/*.feature",
     "mock-server": "node mock-server/server.js",
+    "load-test": "k6 run k6/load-test.js",
+    "load-test:results": "k6 run k6/load-test.js --out json=load-test-results.json",
     "lint": "eslint .",
     "format": "prettier --write ."
   },
