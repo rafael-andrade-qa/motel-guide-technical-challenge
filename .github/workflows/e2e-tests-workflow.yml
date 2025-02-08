@@ -1,0 +1,62 @@
+name: E2E Test Workflow
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  pull_request:
+    types:
+      - opened
+      - synchronize
+  workflow_dispatch:
+
+jobs:
+  run-web-e2e-tests:
+    name: Run Cypress E2E Tests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        browser: [chrome]
+    steps:
+      - name: Checkout Repository Code
+        uses: actions/checkout@v4
+
+      - name: Execute Cypress Tests
+        uses: cypress-io/github-action@v6
+        env:
+          CYPRESS_SUCCESS_NAME: ${{ secrets.CYPRESS_SUCCESS_NAME }}
+          CYPRESS_SUCCESS_EMAIL: ${{ secrets.CYPRESS_SUCCESS_EMAIL }}
+          CYPRESS_SUCCESS_PASSWORD: ${{ secrets.CYPRESS_SUCCESS_PASSWORD }}
+          CYPRESS_LOW_PASSWORD_NAME: ${{ secrets.CYPRESS_LOW_PASSWORD_NAME }}
+          CYPRESS_LOW_PASSWORD_EMAIL: ${{ secrets.CYPRESS_LOW_PASSWORD_EMAIL }}
+          CYPRESS_LOW_PASSWORD_PASSWORD: ${{ secrets.CYPRESS_LOW_PASSWORD_PASSWORD }}
+          CYPRESS_DIFFERENT_EMAILS_NAME: ${{ secrets.CYPRESS_DIFFERENT_EMAILS_NAME }}
+          CYPRESS_DIFFERENT_EMAILS_EMAIL: ${{ secrets.CYPRESS_DIFFERENT_EMAILS_EMAIL }}
+          CYPRESS_DIFFERENT_EMAILS_CONFIRM_EMAIL: ${{ secrets.CYPRESS_DIFFERENT_EMAILS_CONFIRM_EMAIL }}
+          CYPRESS_DIFFERENT_EMAILS_PASSWORD: ${{ secrets.CYPRESS_DIFFERENT_EMAILS_PASSWORD }}
+        with:
+          browser: ${{ matrix.browser }}
+          config-file: ./cypress/config/cypress.config.prod.js
+
+      - name: Upload Failed Test Screenshots
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cypress Test Screenshots
+          path: ./cypress/reports/screenshots/*/*.png
+          retention-days: 1
+
+      - name: Upload Failed Test Videos
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cypress Test Videos
+          path: ./cypress/reports/videos/*.mp4
+          retention-days: 1
+
+      - name: Upload Test Results in JSON Format
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cypress Test Results (JSON)
+          path: ./cypress/reports/mochawesome/*.json
+          retention-days: 1

@@ -1,0 +1,12 @@
+# Dependency directory
+node_modules
+
+# Env file
+cypress.env.json
+
+# Cypress reports
+/cypress/downloads
+/cypress/reports
+/cypress/screenshots
+multi-reporter-config.json
+runner-results/

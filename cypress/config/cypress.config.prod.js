@@ -1,0 +1,28 @@
+import { defineConfig } from 'cypress';
+import baseConfig from '../../cypress.config.js';
+
+const envOverride = {
+  CYPRESS_SUCCESS_NAME: process.env.CYPRESS_SUCCESS_NAME,
+  CYPRESS_SUCCESS_EMAIL: process.env.CYPRESS_SUCCESS_EMAIL,
+  CYPRESS_SUCCESS_PASSWORD: process.env.CYPRESS_SUCCESS_PASSWORD,
+  CYPRESS_LOW_PASSWORD_NAME: process.env.CYPRESS_LOW_PASSWORD_NAME,
+  CYPRESS_LOW_PASSWORD_EMAIL: process.env.CYPRESS_LOW_PASSWORD_EMAIL,
+  CYPRESS_LOW_PASSWORD_PASSWORD: process.env.CYPRESS_LOW_PASSWORD_PASSWORD,
+  CYPRESS_DIFFERENT_EMAILS_NAME: process.env.CYPRESS_DIFFERENT_EMAILS_NAME,
+  CYPRESS_DIFFERENT_EMAILS_EMAIL: process.env.CYPRESS_DIFFERENT_EMAILS_EMAIL,
+  CYPRESS_DIFFERENT_EMAILS_CONFIRM_EMAIL:
+    process.env.CYPRESS_DIFFERENT_EMAILS_CONFIRM_EMAIL,
+  CYPRESS_DIFFERENT_EMAILS_PASSWORD:
+    process.env.CYPRESS_DIFFERENT_EMAILS_PASSWORD,
+};
+
+export default defineConfig({
+  ...baseConfig,
+  e2e: {
+    ...baseConfig.e2e,
+  },
+  env: {
+    ...baseConfig.env,
+    ...envOverride,
+  },
+});
