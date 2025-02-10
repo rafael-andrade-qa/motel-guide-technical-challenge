@@ -18,25 +18,8 @@ The k6 load tests simulate **100 simultaneous users** accessing the API mock end
 
 ### 1. **Install k6**
 
-Depending on your operating system, use one of the following commands:
-
-**Windows:**
-
-```bash
-choco install k6
-```
-
-**Linux:**
-
-```bash
-sudo apt update && sudo apt install k6
-```
-
-**Mac:**
-
-```bash
-brew install k6
-```
+1. Access the official website [by clicking here](https://grafana.com/docs/k6/latest/set-up/install-k6/)
+2. Perform the setup according to your operating system
 
 To verify the installation, run:
 
