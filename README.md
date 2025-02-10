@@ -71,16 +71,16 @@ Before you begin, make sure you have `node` and `npm` installed on your system.
 2. Open the newly created `cypress.env.json` file and populate it with the appropriate secrets for each environment.
 
    ```bash
-   "CYPRESS_SUCCESS_NAME": "",
-   "CYPRESS_SUCCESS_EMAIL": "",
-   "CYPRESS_SUCCESS_PASSWORD": "",
-   "CYPRESS_LOW_PASSWORD_NAME": "",
-   "CYPRESS_LOW_PASSWORD_EMAIL": "",
-   "CYPRESS_LOW_PASSWORD_PASSWORD": "",
-   "CYPRESS_DIFFERENT_EMAILS_NAME": "",
-   "CYPRESS_DIFFERENT_EMAILS_EMAIL": "",
-   "CYPRESS_DIFFERENT_EMAILS_CONFIRM_EMAIL": "",
-   "CYPRESS_DIFFERENT_EMAILS_PASSWORD": ""
+    "CYPRESS_SUCCESS_NAME": "Usuário Sucesso",
+    "CYPRESS_SUCCESS_EMAIL": "sucesso@teste.com",
+    "CYPRESS_SUCCESS_PASSWORD": "SenhaForte123",
+    "CYPRESS_LOW_PASSWORD_NAME": "Usuário Senha Fraca",
+    "CYPRESS_LOW_PASSWORD_EMAIL": "senhafraca@teste.com",
+    "CYPRESS_LOW_PASSWORD_PASSWORD": "12345",
+    "CYPRESS_DIFFERENT_EMAILS_NAME": "Usuário E-mails Diferentes",
+    "CYPRESS_DIFFERENT_EMAILS_EMAIL": "emailprincipal@teste.com",
+    "CYPRESS_DIFFERENT_EMAILS_CONFIRM_EMAIL": "emaildiferente@teste.com",
+    "CYPRESS_DIFFERENT_EMAILS_PASSWORD": "SenhaForte123"
    ```
 
 ### 💻 Command Table
